@@ -1,0 +1,59 @@
+.text{
+    text-align: center;
+
+    h2{
+        font-size: 28px;
+        font-weight: 500;
+    }
+}
+.column {
+    float: left;
+    width: 25%;
+    
+    .card {
+        display:flex;
+        border:none;
+        padding: 10px;
+        text-align: center;
+    
+    
+        img{
+            height:200px;
+            width:100%;
+            object-fit:cover;
+            border-radius: 5px;
+            
+        }
+      }
+      button{
+        background:none;
+        border:none;
+        color:blue;
+        margin-top: 8px;
+
+        svg{
+            animation: slide1 1s ease-in-out infinite;
+        }
+      }
+  }
+
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  @keyframes slide1 {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(5px, 0);
+    }
+  }
